@@ -21,16 +21,29 @@ hero:
       link: /guide/introduction/quickstart
 
 features:
-  - title: Feature A
-    icon: 🧠
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    icon: 📜
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    icon: 🔗
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Fight coupling, not tight coupling
+    icon: ⛓️‍💥
+    details:  If your clients break when the server changes, you’re stuck in a tightly coupled system. Hypermedia decouples client and server interactions, letting each evolve independently without breaking the other.
+  - title: APIs that are a joy to use
+    icon: 😊
+    details: Hypermedia APIs offer an intuitive, flexible and enjoyable experience, making your API not just a powerful tool, but a delight to use.
+  - title: Timeless API design
+    icon: 📆
+    details: Craft your API for the long haul. APIs that last decades will change over time.  With Hypermedia you can make these changes safely, without breaking your clients.
     linkText: Learn more
-    link: /guide/introduction/quickstart
-    
+    link: /guide/introduction/what-is
+
 ---
+<br/>
+<ability-list>
+  <div>performance</div>
+  <div>scalability</div>
+  <div>simplicity</div>
+  <div>modifiability</div>
+  <div>visibility</div>
+  <div>portability</div>
+  <div>reliability</div>
+</ability-list>
+
+## **Software design on the scale of decades.**
+\- Roy Fielding (co-author of the HTTP specification, co-founder of the Apache HTTP Server project)

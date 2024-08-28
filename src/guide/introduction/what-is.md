@@ -1,7 +1,7 @@
 # What is hypermedia?
 
 * **Hypermedia** is data that includes links.
-* It comes from **hypertext** (the HT in HTTP).  Hypermedia allows links in various media types, not just text.
+* It builds on **hypertext** (the HT in HTTP).  Hypermedia allows links in various media types, not just text.
 * **Hypermedia** powers the World Wide Web 
 * It can be used to enrich your services APIs as well.
 

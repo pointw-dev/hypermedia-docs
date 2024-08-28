@@ -7,6 +7,7 @@ import { Tab, Tabs } from 'vue3-tabs-component'
 import TitleImage from '../components/TitleImage.vue'
 import AskStackOverflow from '../components/AskStackOverflow.vue'
 import FaqEntry from "../components/FaqEntry.vue";
+import AbilityList from "../components/AbilityList.vue";
 
 import './tabs.css'
 import './style.css'
@@ -27,5 +28,6 @@ export default {
     app.component('AskStackOverflow', AskStackOverflow)
     app.component('TitleImage', TitleImage)
     app.component('FaqEntry', FaqEntry)
+    app.component('AbilityList', AbilityList)
   }
 } satisfies Theme
