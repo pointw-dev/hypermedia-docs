@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" width="283px" height="55px" viewBox="0, 0, 283, 55" preserveAspectRatio="none" contentStyleType="text/css" zoomAndPan="magnify" style="background:#FFFFFF;">
+  <defs />
+  <g>
+    <g id="elem_customers">
+      <rect x="7" y="7" width="71" height="42.7031" rx="2.5" ry="2.5" id="customers" stroke-width="0.5" codeLine="9" style="fill:#F1F1F1;stroke:#181818;" />
+      <text x="11.5" y="24.457" textLength="62" lengthAdjust="spacing" font-family="sans-serif" font-size="12" font-style="italic" style="fill:black;">«resource»</text>
+      <text x="10" y="41.627" textLength="65" lengthAdjust="spacing" font-family="sans-serif" font-size="14" style="fill:black;">customers</text>
+    </g>
+    <g id="elem_orders">
+      <rect x="113.5" y="7" width="64" height="42.7031" rx="2.5" ry="2.5" id="orders" stroke-width="0.5" codeLine="10" style="fill:#F1F1F1;stroke:#181818;" />
+      <text x="114.5" y="24.457" textLength="62" lengthAdjust="spacing" font-family="sans-serif" font-size="12" font-style="italic" style="fill:black;">«resource»</text>
+      <text x="125" y="41.627" textLength="41" lengthAdjust="spacing" font-family="sans-serif" font-size="14" style="fill:black;">orders</text>
+    </g>
+    <g id="elem_products">
+      <rect x="212.5" y="7" width="64" height="42.7031" rx="2.5" ry="2.5" id="products" stroke-width="0.5" codeLine="11" style="fill:#F1F1F1;stroke:#181818;" />
+      <text x="213.5" y="24.457" textLength="62" lengthAdjust="spacing" font-family="sans-serif" font-size="12" font-style="italic" style="fill:black;">«resource»</text>
+      <text x="217" y="41.627" textLength="55" lengthAdjust="spacing" font-family="sans-serif" font-size="14" style="fill:black;">products</text>
+    </g>
+    <g id="link_customers_orders">
+      <path d="M86.55 28.5 C92.72 28.5 98.89 28.5 105.06 28.5" id="customers-orders" stroke-width="1" codeLine="13" style="fill:none;stroke:#181818;" />
+      <line x1="82.31" y1="32.5" x2="82.31" y2="24.5" stroke-width="1" style="stroke:#181818;" />
+      <line x1="85.31" y1="32.5" x2="85.31" y2="24.5" stroke-width="1" style="stroke:#181818;" />
+      <line x1="86.31" y1="28.5" x2="78.31" y2="28.5" stroke-width="1" style="stroke:#181818;" />
+      <line x1="105.48" y1="28.5" x2="113.48" y2="22.5" stroke-width="1" style="stroke:#181818;" />
+      <line x1="105.48" y1="28.5" x2="113.48" y2="34.5" stroke-width="1" style="stroke:#181818;" />
+      <line x1="105.48" y1="28.5" x2="113.48" y2="28.5" stroke-width="1" style="stroke:#181818;" />
+      <ellipse cx="99.48" cy="28.5" rx="4" ry="4" stroke-width="1" style="fill:none;stroke:#181818;" />
+    </g>
+    <g id="link_orders_products">
+      <path d="M185.74 28.5 C191.84 28.5 197.94 28.5 204.04 28.5" id="orders-products" stroke-width="1" codeLine="14" style="fill:none;stroke:#181818;" />
+      <line x1="181.6" y1="32.5" x2="181.6" y2="24.5" stroke-width="1" style="stroke:#181818;" />
+      <line x1="184.6" y1="32.5" x2="184.6" y2="24.5" stroke-width="1" style="stroke:#181818;" />
+      <line x1="185.6" y1="28.5" x2="177.6" y2="28.5" stroke-width="1" style="stroke:#181818;" />
+      <line x1="204.36" y1="28.5" x2="212.36" y2="22.5" stroke-width="1" style="stroke:#181818;" />
+      <line x1="204.36" y1="28.5" x2="212.36" y2="34.5" stroke-width="1" style="stroke:#181818;" />
+      <line x1="204.36" y1="28.5" x2="212.36" y2="28.5" stroke-width="1" style="stroke:#181818;" />
+      <line x1="202.36" y1="24.5" x2="202.36" y2="32.5" stroke-width="1" style="stroke:#181818;" />
+    </g>
+  </g>
+  <title>new 5</title>
+  <metadata>
+    <RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:puv="https://github.com/Fruchtzwerg94/PlantUmlViewer" xmlns="rdf">
+      <puv:product>PlantUML Viewer by Philipp Schmidt</puv:product>
+      <puv:version>1.5.0.9</puv:version>
+      <puv:plantuml>1.2023.0</puv:plantuml>
+      <rdf:Description>
+        <dc:creator>HARMONY\Michael Ottoson</dc:creator>
+        <dc:date>2024-05-23T20:08:40.5402441Z</dc:date>
+        <dc:source>new 5</dc:source>
+        <dc:title>new 5</dc:title>
+        <dc:format>image/svg</dc:format>
+        <puv:page>1</puv:page>
+        <puv:diagram>1</puv:diagram>
+      </rdf:Description>
+    </RDF>
+  </metadata>
+  <desc>@startuml
+hide &lt;&lt;resource&gt;&gt; circle
+hide &lt;&lt;remote&gt;&gt; circle
+hide members
+
+skinparam class {
+    BackgroundColor&lt;&lt;remote&gt;&gt; LightBlue
+}
+
+class customers &lt;&lt;resource&gt;&gt;
+class orders &lt;&lt;resource&gt;&gt;
+class products &lt;&lt;resource&gt;&gt;
+
+customers ||-right-o{ orders
+orders ||-right-|{ products
+@enduml</desc>
+</svg>
