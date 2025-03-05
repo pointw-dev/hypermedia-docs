@@ -1,0 +1,19 @@
+@startuml
+hide footbox
+participant Client
+participant Gateway as "<color #white>Gateway</color>" #70AD47
+participant API1 as "<color #white>API1</color>" #4672C4
+participant API2 as "<color #white>API2</color>" #4672C4
+participant API3 as "<color #white>API3</color>" #4672C4
+
+API1 -> Gateway: register link relations
+API2 -> Gateway: register link relations
+API3 -> Gateway: register link relations
+
+Client -> Gateway: GET /  (root resource)
+
+Client -> API1 : GET _links[rel1]
+Client -> API2 : GET _links[rel2]
+Client -> API3 : GET _links[rel3]
+
+@enduml

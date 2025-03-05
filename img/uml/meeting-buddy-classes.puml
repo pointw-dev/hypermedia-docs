@@ -1,0 +1,51 @@
+@startuml
+hide <<module>> circle
+skinparam class {
+    BackgroundColor<<module>> LightBlue
+}
+
+
+class Event  {
+ name: string
+
+ <<api>> register()
+ <<api>> view_attendees()
+ {static} get_new_event()
+}
+
+class Venue {
+ name: string
+ 
+ manage_events()
+ <<api>> get_events()
+ <<api>> add_event(event)
+ {static} <<api>> select_venue() 
+ -_display_events(events)
+ -_get_user_choice()
+ -_handle_choice(choice, events)
+ -_add_event()
+ -_select_event_and_perform_action(choice, events)
+ 
+}
+
+class Api {
+    - <<alice_only>> {static} _root_resource
+    {static} usernames
+    {static} logged_in_as
+    {static} get_headers()
+    {static} display_error(result)
+    {static} url_join(base, path)
+    {static} <<alice_only>> get_root_resource()
+    <<alice_only>> {static} url_from_resource(resource, rel)
+    - {static} _get_token(username)
+}
+
+class Console {
+ clear_screen()
+ title(title, underline)
+ select_from_menu(prompt, number_of_items)
+ input_with_quit_or_cancel(prompt)
+ prompt_for_fields(prompts)
+}
+
+@enduml

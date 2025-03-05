@@ -1,0 +1,21 @@
+@startuml
+autonumber
+hide footbox
+
+actor You
+participant Client
+participant EB as "<color #white>Event Buddy</color>" #4672C4
+
+You -> Client : start
+Client -> EB : GET root resource (alice only)
+Client -> EB : GET venues
+Client -> Client : display venues in menu
+You -> Client : select a venue
+Client -> EB : GET events for the venue
+Client -> Client : display events
+You -> Client : select event / show attendees
+Client -> EB : GET registrations for the event (with account info)
+Client -> Client : display attendees
+You -> Client : schedule event for the venue
+Client -> EB: POST new event to the venue
+@enduml
