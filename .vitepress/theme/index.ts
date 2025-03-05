@@ -5,6 +5,8 @@ import DefaultTheme from 'vitepress/theme'
 
 import { Tab, Tabs } from 'vue3-tabs-component'
 import TitleImage from '../components/TitleImage.vue'
+import CenteredImage from "../components/CenteredImage.vue";
+import NotFound from '../components/NotFound.vue'
 import Copyright from "../components/Copyright.vue";
 import AskStackOverflow from '../components/AskStackOverflow.vue'
 import FaqEntry from "../components/FaqEntry.vue";
@@ -12,7 +14,6 @@ import AbilityList from "../components/AbilityList.vue";
 
 import './tabs.css'
 import './style.css'
-import CenteredImage from "../components/CenteredImage.vue";
 
 export default {
   extends: DefaultTheme,
@@ -21,7 +22,8 @@ export default {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
       'doc-footer-before': () => h(AskStackOverflow),
-      'doc-after': () => h(Copyright),
+      'not-found': () => h(NotFound),
+      'doc-after': () => h(Copyright)
     })
   },
   

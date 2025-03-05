@@ -31,7 +31,7 @@ export default defineConfig({
             }
         },
         footer: {
-            message: 'Released under the <a class="link" href="https://raw.githubusercontent.com/pointw-dev/hypermedia-docs/refs/heads/main/LICENSE">MIT License</a>.',
+            message: 'Released under the <a target="_blank" class="link" href="https://raw.githubusercontent.com/pointw-dev/hypermedia-docs/refs/heads/main/LICENSE">MIT License</a>.',
             copyright: 'Copyright © 2025 Michael Ottoson (pointw.com)'
         }
     },
