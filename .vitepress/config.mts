@@ -2,7 +2,7 @@ import {defineConfig, withBase} from 'vitepress'
 import {fileURLToPath, URL} from 'node:url'
 
 
-const basePath = 'hypermedia'
+const basePath = 'hypermedia-docs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
