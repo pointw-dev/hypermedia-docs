@@ -46,4 +46,8 @@ features:
 </ability-list>
 
 ## **Software design on the scale of decades.**
-\- Roy Fielding (co-author of the HTTP specification, co-founder of the Apache HTTP Server project)
+> \- Roy Fielding
+> 
+>  &nbsp;&nbsp;&nbsp;_co-author: HTTP specification_
+> 
+>  &nbsp;&nbsp;&nbsp;_co-founder: Apache HTTP Server project_

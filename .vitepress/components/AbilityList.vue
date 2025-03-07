@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18pt;
+  font-size: 16pt;
 }
 
 .centered-line > *:not(:last-child)::after {
