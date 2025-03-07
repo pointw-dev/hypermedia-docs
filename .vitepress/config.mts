@@ -3,7 +3,7 @@ import {fileURLToPath, URL} from 'node:url'
 
 const hostname = 'https://pointw-dev.github.io'
 const basePath = 'hypermedia-docs'
-const seoLogo = 'https://pointw-dev.github.io/hypermedia-docs/img/hypermedia-cars.svg'
+const seoLogo = 'https://pointw-dev.github.io/hypermedia-docs/img/hypermedia-card.svg'
 const title = 'hypermedia'
 const tagline = 'Resilient API design using the power of the Web'
 
