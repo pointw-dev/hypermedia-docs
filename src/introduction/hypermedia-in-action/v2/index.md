@@ -15,7 +15,7 @@ Event Buddy v2 came about after a significant re-architecture effort.  Of course
 Here is the motivation for the re-architecture:  the initial decision to have these resources powered by a single component worked well until a drastic upturn in business.  Venues, for example, was intended to represent the meeting places in an office building - until we started attracting hotels, convention centres, and even a theme park.  Registrations were overwhelmed when a new mobile apps which used the system were released.  
 
 ### Breaking it all up
-Long story short, it was decided to split the single component into four - one component to handle each resource.  Each component in this new set of microservices will have unique and individual deployment profiles (scaling groups, load balancers, multi-regions, etc).  This means, however, that each resource must be relocated to a different domain - the URLs for everything will change.
+Long story short, it was decided to split the single component into four - one component to handle each resource.  Each component in this new set of microservices will have unique and individual deployment profiles (scaling groups, load balancers, multi-regions, etc.).  This means, however, that each resource must be relocated to a different domain - the URLs for everything will change.
 
 ### Introducing the gateway
 Splitting a single service into four presents a problem of orchestration.  To address this we used the [gateway pattern](https://www.geeksforgeeks.org/api-gateway-patterns-in-microservices/).

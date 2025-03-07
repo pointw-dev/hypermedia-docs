@@ -18,7 +18,7 @@ The bulk of the client's behaviour is defined in `event.py` and `venue.py`
 <centered-image src="/img/meeting-buddy-classes.svg" rounded />
 
 :::tip Note
-The functions sterotyped as `<<api>>` are the functions that send requests to the backend.
+The functions stereotyped as `<<api>>` are the functions that send requests to the backend.
 :::
 
 ## A closer look at Bob
@@ -96,7 +96,7 @@ The `config.py` file for `alice` is the same:
 BASE_API_URL = 'http://localhost:2112'
 ```
 
-The `alice` client adds a couple things to the `Api` class.
+The `alice` client adds a couple of methods to the `Api` class.
 
 ```python{3,12}
 # api.py (alice)

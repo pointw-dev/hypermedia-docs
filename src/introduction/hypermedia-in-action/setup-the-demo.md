@@ -1,4 +1,4 @@
-# Setup the demo
+# Set up the demo
 
 ## Prerequisites
 To run this demo you will need:
@@ -9,7 +9,7 @@ To run this demo you will need:
 * (optional) VSCode, or other IDE or text editor
 
 ## Clone the repo
-You can clone the demo [from github](https://github.com/pointw-dev/hypermedia-demo):
+You can clone the demo [from GitHub](https://github.com/pointw-dev/hypermedia-demo):
 
 ```bash
 git clone https://github.com/pointw-dev/hypermedia-demo.git

@@ -1,8 +1,9 @@
 import {defineConfig, withBase} from 'vitepress'
 import {fileURLToPath, URL} from 'node:url'
 
-
+const hostname = 'https://pointw-dev.github.io'
 const basePath = 'hypermedia-docs'
+const seoLogo = 'https://pointw-dev.github.io/hypermedia-docs/img/hero.svg'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -38,7 +39,14 @@ export default defineConfig({
 
     base: `/${basePath}/`,
     head: [
-        ['link', {rel: 'icon', href: `/${basePath}/favicon.ico`}]
+        ['link', {rel: 'icon', href: `/${basePath}/favicon.ico`}],
+
+        // test with https://www.opengraph.xyz/url/
+        ['meta', {property: 'og:image', content: seoLogo}],
+        ['meta', {property: 'og:type', content: 'website'}],
+
+        ['meta', {name: 'twitter:image', value: seoLogo}],
+        ['meta', {name: 'twitter:card', value: 'summary'}]
     ],
     srcDir: 'src',
     vite: {
@@ -50,6 +58,9 @@ export default defineConfig({
                 }
             ]
         }
+    },
+    sitemap: {
+        hostname: hostname + (basePath? `/${basePath}/` : '')
     }
 })
 
