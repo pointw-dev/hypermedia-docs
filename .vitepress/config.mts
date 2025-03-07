@@ -3,12 +3,17 @@ import {fileURLToPath, URL} from 'node:url'
 
 const hostname = 'https://pointw-dev.github.io'
 const basePath = 'hypermedia-docs'
-const seoLogo = 'https://pointw-dev.github.io/hypermedia-docs/img/hero.svg'
+const seoLogo = 'https://pointw-dev.github.io/hypermedia-docs/img/hypermedia-cars.svg'
+const title = 'hypermedia'
+const tagline = 'Resilient API design using the power of the Web'
+
+
+const siteUrl = hostname + (basePath? `/${basePath}/` : '')
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: 'hypermedia',
-    description: 'Resilient API design using the power of the Web ',
+    title: title,
+    description: tagline,
 
     themeConfig: {
         siteTitle: 'hypermedia',
@@ -43,10 +48,17 @@ export default defineConfig({
 
         // test with https://www.opengraph.xyz/url/
         ['meta', {property: 'og:image', content: seoLogo}],
+        ['meta', {property: "og:url", content: siteUrl}],
+        ['meta', {property: "og:description", content: tagline}],
         ['meta', {property: 'og:type', content: 'website'}],
 
-        ['meta', {name: 'twitter:image', value: seoLogo}],
-        ['meta', {name: 'twitter:card', value: 'summary'}]
+        ['meta', {name: "twitter:card", content: "summary_large_image"}],
+        ['meta', {name: 'twitter:image', content: seoLogo}],
+        ['meta', {property: "twitter:domain", content: "pointw.com"}],
+        ['meta', {property: "twitter:url", content: siteUrl}],
+        ['meta', {name: "twitter:title", content: title}],
+        ['meta', {name: "twitter:description", content: tagline}]
+
     ],
     srcDir: 'src',
     vite: {
@@ -60,7 +72,7 @@ export default defineConfig({
         }
     },
     sitemap: {
-        hostname: hostname + (basePath? `/${basePath}/` : '')
+        hostname: siteUrl
     }
 })
 
