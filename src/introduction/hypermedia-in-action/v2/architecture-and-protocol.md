@@ -22,3 +22,5 @@ Looking only at the scripted steps the prior sections walked you through, the pr
 :::tip Note
 Even though the backend architecture changed, the protocol, which is based on the domain model, can be delivered in the same fashion
 :::
+
+<comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />

@@ -127,3 +127,5 @@ def select_venue():
 We can see the problem is the two lines before 89. The URL is built using the location where the `/venues` resource _used to be_ served.  The GET returns something that does not include `_items` (a 404 response that a real client would check for).  When line 89 tries to access  `_items`, the `KeyError` is thrown.
 
 In the next page we will look at what it will take to fix `bob` to work with v2.  
+
+<comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />

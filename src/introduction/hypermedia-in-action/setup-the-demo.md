@@ -40,3 +40,5 @@ pip install halchemy
 ::: tip <i/>
 Installing halchemy also installs the [requests](https://requests.readthedocs.io/en/latest/) library. Both the `alice` client and the `bob` client use this - to keep the comparison between the two apples-to-apples.
 :::
+
+<comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />

@@ -80,3 +80,5 @@ What is hypermedia?
 * A client uses the labels (link relations) to find the link to the data or capability it needs.
 * Clients follow the links opaquely, that is without knowledge of how the URL is constructed.
 * This lets the server-side alter how it delivers services - the labels to data/capabilities remain the same but locations can change
+
+<comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />

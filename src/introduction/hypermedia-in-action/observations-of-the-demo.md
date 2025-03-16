@@ -7,3 +7,5 @@ The de-coupling power of the hypermedia approach is clear:
     * To avoid such expensive client rollouts, teams will often run multiple versions of the APIs so old clients can use keep using v1 and newer clients can use v2.
     * Some teams even include `v1` in the initial release, anticipating there will be a `v2`
 * By following the hypermedia approach APIs can evolve without versioning.
+
+<comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />

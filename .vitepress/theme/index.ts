@@ -1,15 +1,11 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
+import { useData } from 'vitepress'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 
 import { Tab, Tabs } from 'vue3-tabs-component'
-import TitleImage from '../components/TitleImage.vue'
-import CenteredImage from "../components/CenteredImage.vue";
-import NotFound from '../components/NotFound.vue'
-import Copyright from "../components/Copyright.vue";
-import AskStackOverflow from '../components/AskStackOverflow.vue'
-import FaqEntry from "../components/FaqEntry.vue";
+import { AskStackOverflow, CenteredImage, CommentsSection, Copyright, FaqEntry, NotFound } from '@pointw/vitepress-component-bundle'
 import AbilityList from "../components/AbilityList.vue";
 
 import './tabs.css'
@@ -19,21 +15,24 @@ export default {
   extends: DefaultTheme,
   
   Layout: () => {
+    const { frontmatter, theme } = useData()
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'doc-footer-before': () => h(AskStackOverflow),
+      'doc-footer-before': () => h(AskStackOverflow, { frontmatter, theme }),
       'not-found': () => h(NotFound),
-      'doc-after': () => h(Copyright)
+      'doc-after': () => h(Copyright, {message: '2025 Michael Ottoson (pointw.com)'})
     })
   },
   
   enhanceApp({ app, router, siteData }) {
     app.component('Tab', Tab)
     app.component('Tabs', Tabs)
+
     app.component('AskStackOverflow', AskStackOverflow)
     app.component('CenteredImage', CenteredImage)
-    app.component('TitleImage', TitleImage)
+    app.component('CommentsSection', CommentsSection)
     app.component('FaqEntry', FaqEntry)
+
     app.component('AbilityList', AbilityList)
   }
 } satisfies Theme

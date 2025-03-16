@@ -45,3 +45,5 @@ References to code in the following are pseudocode for brevity.
 |  10  | Client now has a list of registrations (with embedded account information) and displays the names of the attendees.                                                                                                                                                                                                         |
 |  11  | You entered `A` for Add, then entered the event details.                                                                                                                                                                                                                                                                    |
 |  12  | Client tells the venue to send a POST request with its body containing the event details: `venue.add_event(event)`.<br/>**alice**:<br/>&nbsp;&nbsp;`url = Api.url_from_resource(venue, 'events')->POST event`<br/>**bob**:<br/>&nbsp;&nbsp;`url = Api.url_join(BASE_API_URL, f'/venues/{venue["_id"]}/events')->POST event` |
+
+<comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />

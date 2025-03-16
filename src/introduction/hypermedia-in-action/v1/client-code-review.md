@@ -199,3 +199,5 @@ def get_events(self):
 ```
 
 The `bob` client had to construct the URL that was there in the `_links` all along. Instead of constructing the URL, `alice` blindly follows the `href` for the `events` link relation.
+
+<comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />

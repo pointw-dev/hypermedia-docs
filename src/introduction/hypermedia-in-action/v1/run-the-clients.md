@@ -113,3 +113,5 @@ As mentioned before, we will look at registering to attend an event in a future 
 You will notice the user experience with `bob` is identical to `alice`.
 
 Exit the `bob` client: type `q` (enter).
+
+<comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />

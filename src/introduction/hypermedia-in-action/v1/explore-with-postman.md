@@ -73,3 +73,5 @@ This is a classic hypermedia response.  It has the data you requested (the list 
 In the first venue's `_links`, find the link labelled `events`.  Click on that `href` value to GET the events related to that venue.
 
 Feel free to explore as you see fit.
+
+<comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />

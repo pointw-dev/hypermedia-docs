@@ -118,3 +118,5 @@ Try it by clicking on the `href` value for `venues`.  As before Postman opens a 
 In the first venue's `_links`, find the link labelled `events`.  Click on that `href` value to GET the events related to that venue, again - exactly as we did before.  Only the `href` values are different.
 
 Feel free to explore as you see fit.
+
+<comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />

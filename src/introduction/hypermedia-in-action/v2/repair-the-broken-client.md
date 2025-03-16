@@ -240,3 +240,5 @@ If you were not following along making the changes to the `bob` client, you can 
 All of the above changes can be found in the `clients/bob-v2` folder.  With Event Buddy v2 running, it will work as expected - but will fail if v1 is running.
 
 As we have seen, `alice` works with both versions - and versions yet to come.
+
+<comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />

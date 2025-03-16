@@ -19,7 +19,8 @@ export default defineConfig({
         siteTitle: 'hypermedia',
         stackOverflowTags: ['hypermedia', 'rest', 'api'],
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/pointw-dev/hypermea'}
+            {icon: 'github', link: 'https://github.com/pointw-dev/hypermea'},
+            {icon: 'discord', link: 'https://discord.gg/2k5vqUTRqN'}
         ],
         logo: '/img/hero.svg',
 
@@ -66,7 +67,7 @@ export default defineConfig({
             alias: [
                 {
                     find: /^.*\/VPFeature\.vue$/,
-                    replacement: fileURLToPath(new URL('./components/VPFeature.vue', import.meta.url))
+                    replacement: fileURLToPath(new URL('./overrides/VPFeature.vue', import.meta.url))
                 }
             ]
         }
