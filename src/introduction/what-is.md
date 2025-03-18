@@ -7,7 +7,7 @@ footer: true
 
 Hypermedia is a way to approach the API design of your distributed services architecture. It helps solve the problem of client coupling.  It has other benefits too, which I will elaborate in another section. Coupling is bad because when things change (and they always do) it risks broken clients and costly version rollouts.
 
-<centered-image src="/img/decoupling.png" width="400" rounded />
+<centered-image src="/img/decoupling.png" width="400" rounded>Train cars do not assume what is in the other car.</centered-image>
 
 Hypermedia decreases coupling by addressing what the client needs to know in advance - and importantly what it **doesn't** need to know - in order to use your services. Instead of hard-wiring assumptions about the backend structure, the client focuses on what it needs to accomplish. The server is responsible for providing the client an easy-to-follow map of the available data and capabilities. The client knows **what** to ask for. The server knows **how** to respond to those requests, and guides the client to next steps.
 
