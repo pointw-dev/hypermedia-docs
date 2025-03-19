@@ -19,6 +19,6 @@ We will look at an initial implementation of a backend as well as two clients th
 ## Introducing Event Buddy
 The backend implements the Event Buddy service. It is used to create venues, schedule events at these venues, and allow members to register to attend events.
 
-<centered-image src="/img/event-buddy-domain.svg" width="600" rounded>The Event Buddy domain</centered-image>
+<centered-image src="/img/event-buddy-domain.svg" width="450" rounded>The Event Buddy domain</centered-image>
 
 <comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />
