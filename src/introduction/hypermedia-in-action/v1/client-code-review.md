@@ -127,7 +127,7 @@ So how does `alice` get the list of venues?  The same as `bob` does, except for 
 @staticmethod
 def select_venue():
     root = Api.get_root_resource()
-    url = Api.url_from_resource(root, 'venues')
+    url = Api.url_from_resource(root, 'venue')
     result = requests.get(url, headers=Api.get_headers())
     ...
     ...
@@ -139,9 +139,8 @@ First `alice` gets the root resource.  It will use this to find where the venues
     "_links": {
         ...
         ...
-        "venues": {
-            "href": "/venues",
-            "title": "venues"
+        "venue": {
+            "href": "/venues"
         },
         ...
         ...
@@ -149,14 +148,14 @@ First `alice` gets the root resource.  It will use this to find where the venues
 }
 ```
 
-Next `alice` uses `url_from_resources()` to look up the `href` in the resource's `_links` object having a link relation of `venues`.  This translates to, "From the root resource, follow the link named 'venues' and send a GET request"
+Next `alice` uses `url_from_resources()` to look up the `href` in the resource's `_links` object having a link relation of `venue`.  This translates to, "From the root resource, follow the link named 'venues' and send a GET request"
 
 Once the user has selected a venue, `alice` needs that venue's events.  To create the URL to GET the events for a venue, see `venue.get_events()`:
 
 ```python
 # venue.py (alice)
 def get_events(self):
-    url = Api.url_from_resource(self, 'events')
+    url = Api.url_from_resource(self, 'event')
     result = requests.get(url, headers=Api.get_headers())
     ...
     ...
@@ -165,24 +164,29 @@ In other words: follow this venue (`self`) to its events and send a GET request.
 
 ```json{17}
 {
-    "_id": "67c0a76cee79b468604e0f14",
+    "_id": "680529bf1c7f4a575422bf37",
     "name": "Developer Meeting Room",
     "capacity": 5,
-    "_updated": "2025-02-27T17:57:00",
-    "_created": "2025-02-27T17:57:00",
-    "_etag": "f883d2a897c455d3eb7febe229847c40188f6eaa",
+    "description": null,
+    "_updated": "2025-04-20T17:07:11",
+    "_created": "2025-04-20T17:07:11",
+    "_etag": "a7b02f1201cf9e1f40ce1768009956420871d045",
     "_links": {
         "self": {
-            "href": "/venues/67c0a76cee79b468604e0f14",
-            "title": "venue"
+            "href": "/venues/680529bf1c7f4a575422bf37"
+        },
+        "parent": {
+            "href": "/venues"
+        },
+        "collection": {
+            "href": "/venues"
         },
         "edit-form": {
-            "href": "/venues/67c0a76cee79b468604e0f14/edit-form",
-            "title": "GET to fetch edit-form"
+            "href": "/venues/680529bf1c7f4a575422bf37/edit-form",
+            "_note": "GET to fetch edit-form"
         },
-        "events": {
-            "href": "/venues/67c0a76cee79b468604e0f14/events",
-            "title": "events"
+        "event": {
+            "href": "/venues/680529bf1c7f4a575422bf37/events"
         }
     }
 }
@@ -198,6 +202,6 @@ def get_events(self):
     ...
 ```
 
-The `bob` client had to construct the URL that was there in the `_links` all along. Instead of constructing the URL, `alice` blindly follows the `href` for the `events` link relation.
+The `bob` client had to construct the URL that was there in the `_links` all along. Instead of constructing the URL, `alice` blindly follows the `href` for the `event` link relation.
 
 <comments-section repo="pointw-dev/hypermedia-docs" repoId="R_kgDOODT1fw" category="General" categoryId="DIC_kwDOODT1f84CoFLx" />

@@ -32,31 +32,31 @@ This will produce a JSON response (HAL actually) like this:
     "_links": {
         "self": {
             "href": "/",
-            "title": "event-buddy root"
+            "_note": "Home resource for event-buddy"
+        },
+        "event": {
+            "href": "/events",
+            "_note": "add ?links_only query string to GET _links without the collection"
+        },
+        "account": {
+            "href": "/accounts",
+            "_note": "add ?links_only query string to GET _links without the collection"
+        },
+        "venue": {
+            "href": "/venues",
+            "_note": "add ?links_only query string to GET _links without the collection"
+        },
+        "registration": {
+            "href": "/registrations",
+            "_note": "add ?links_only query string to GET _links without the collection"
         },
         "logging": {
             "href": "/_logging",
-            "title": "logging"
+            "_note": "logging verbosity: GET, PUT"
         },
         "settings": {
             "href": "/_settings",
-            "title": "_settings"
-        },
-        "events": {
-            "href": "/events",
-            "title": "events"
-        },
-        "venues": {
-            "href": "/venues",
-            "title": "venues"
-        },
-        "registrations": {
-            "href": "/registrations",
-            "title": "registrations"
-        },
-        "accounts": {
-            "href": "/accounts",
-            "title": "accounts"
+            "_note": "versions and settings: GET"
         }
     }
 }
@@ -66,11 +66,17 @@ This is the root resource.  As is typical for this type of API, it has no data -
 ## Follow the links
 Hover over each of the `href` values.  You will see Postman recognizes them as links.
 
+:::info Note
+Links are labeled by "link relations", e.g. `venue`, `event`, `account`, `registration`.  Link rels are singular by convention.  To a hypermedia client the link rels are important, not the `href`.  The `href` can be anything - clients just follow it.  To conform with normal URL design, the URL path to resources are plural.
+
+This is only confusing if you look at the href as if it has meaning. To a hypermedia client, it is just a string to plug into the http library.  The `href` can change (as we will see) but the link rel does not.
+:::
+
 Click on `/venues`.  Postman opens a new tab to GET that URL.  Click "Send" to see the venues related to the root resource.
 
-This is a classic hypermedia response.  It has the data you requested (the list of venues in an array named `_items`) and it has links (in an object named `_links`).
+This is a classic hypermedia response.  It has the data you requested (the list of venues in an array in `_embedded`, labelled `venue`).  Each venue has links (in an object named `_links`).
 
-In the first venue's `_links`, find the link labelled `events`.  Click on that `href` value to GET the events related to that venue.
+In the first venue's `_links`, find the link labelled `event`.  Click on that `href` value to GET the events related to that venue.
 
 Feel free to explore as you see fit.
 

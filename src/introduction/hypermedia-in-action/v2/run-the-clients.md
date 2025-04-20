@@ -102,29 +102,29 @@ Right away we run into an error:
 Meeting Buddy
 =============
 Traceback (most recent call last):
-  File "/home/michael/git/pointw-dev/hypermedia-demo/clients/bob/./meeting_buddy.py", line 19, in <module>
+  File "/home/michael/git/pointw-dev/hypermedia-demo/clients/bob/./meeting_buddy.py", line 33, in <module>
     main()
-  File "/home/michael/git/pointw-dev/hypermedia-demo/clients/bob/./meeting_buddy.py", line 12, in main
+  File "/home/michael/git/pointw-dev/hypermedia-demo/clients/bob/./meeting_buddy.py", line 26, in main
     venue = Venue.select_venue()
             ^^^^^^^^^^^^^^^^^^^^
-  File "/home/michael/git/pointw-dev/hypermedia-demo/clients/bob/venue.py", line 89, in select_venue
-    venues_data = result.json()['_items']
-                  ~~~~~~~~~~~~~^^^^^^^^^^
-KeyError: '_items'
+  File "/home/michael/git/pointw-dev/hypermedia-demo/clients/bob/venue.py", line 94, in select_venue
+    venues_data = result.json()['_embedded']['venue']
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: '_embedded'
 ```
 
-Let's take a look at `venue.py` line 89:
+Let's take a look at `venue.py` around line 90:
 
-```python:line-numbers=85{5}
+```python:line-numbers=90{5}
 @staticmethod
 def select_venue():
-    url = url_join(BASE_API_URL, '/venues')
-    result = requests.get(url, headers=HEADERS)
-    venues_data = result.json()['_items']
-    venues = [Venue(venue) for venue in venues_data]    
+    url = Api.url_join(BASE_API_URL, '/venues')
+    result = requests.get(url, headers=Api.get_headers())
+    venues_data = result.json()['_embedded']['venue']
+    venues = [Venue(venue) for venue in venues_data]
 ```
 
-We can see the problem is the two lines before 89. The URL is built using the location where the `/venues` resource _used to be_ served.  The GET returns something that does not include `_items` (a 404 response that a real client would check for).  When line 89 tries to access  `_items`, the `KeyError` is thrown.
+We can see the problem is the two lines before 94. The URL is built using the location where the `/venues` resource _used to be_ served.  The GET returns something that does not include `_embedded` (a 404 response that a real client would check for).  When line 94 tries to access  `_embedded`, the `KeyError` is thrown.
 
 In the next page we will look at what it will take to fix `bob` to work with v2.  
 
