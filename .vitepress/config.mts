@@ -7,7 +7,6 @@ const seoLogo = 'https://pointw-dev.github.io/hypermedia-docs/img/hypermedia-car
 const title = 'hypermedia'
 const tagline = 'Resilient API design using the power of the Web'
 
-
 const siteUrl = hostname + (basePath? `/${basePath}/` : '')
 
 // https://vitepress.dev/reference/site-config
@@ -16,7 +15,7 @@ export default defineConfig({
     description: tagline,
 
     themeConfig: {
-        siteTitle: 'hypermedia',
+        siteTitle: title,
         stackOverflowTags: ['hypermedia', 'rest', 'api'],
         socialLinks: [
             {icon: 'github', link: 'https://github.com/pointw-dev/hypermea'},
@@ -74,6 +73,17 @@ export default defineConfig({
     },
     sitemap: {
         hostname: siteUrl
+    },
+    transformPageData(pageData) {
+        const canonicalUrl = siteUrl + `${pageData.relativePath}`
+            .replace(/index\.md$/, '')
+            .replace(/\.md$/, '.html')
+
+        pageData.frontmatter.head ??= []
+        pageData.frontmatter.head.push([
+            'link',
+            { rel: 'canonical', href: canonicalUrl }
+        ])
     }
 })
 
@@ -96,6 +106,7 @@ function getSidebar() {
                         },
                         {
                             text: 'Launch Event Buddy v1',
+                            collapsed: true,
                             link: '/introduction/hypermedia-in-action/v1/',
                             items: [
                                 {
@@ -122,6 +133,7 @@ function getSidebar() {
                         },
                         {
                             text: 'Launch Event Buddy v2',
+                            collapsed: true,
                             link: '/introduction/hypermedia-in-action/v2/',
                             items: [
                                 {

@@ -22,6 +22,11 @@ export const standards = {
             title: 'HTTP/1.1 Semantics and Content',
             description: 'Defines HTTP methods, status codes, headers, and content negotiation (superseded by RFC 9110).'
         },
+        '7235': {
+            title: 'HTTP Authentication',
+            description: 'Defines how HTTP clients and servers negotiate authentication using standardized headers.',
+            obsoletedBy: '9110'
+        },
         '8288': {
             title: 'Web Linking',
             description: 'Defines a framework for typed links between resources, including the `Link` header field in HTTP.'
@@ -31,7 +36,7 @@ export const standards = {
             description: 'Standard format for error responses in HTTP APIs using the `application/problem+json` media type.'
         },
         '5988': {
-            title: 'Web Linking (Obsolete)',
+            title: 'Web Linking',
             description: 'Earlier version of Web Linking.',
             obsoletedBy: '8288'
         },
